@@ -1,0 +1,272 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[margin=15mm]{geometry}
+\usepackage{etaremune, enumitem}  % for lists
+\usepackage{longtable}
+\usepackage[document]{ragged2e}         % left justify
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tikz}  % for skills bar
+\usepackage{xcolor}
+
+
+% Colors
+% \definecolor{color_highlight}{RGB}{70,130,180} % steelblue
+\definecolor{color_highlight}{RGB}{30,144,255} % dodgerblue 1
+\definecolor{color_barbg}{rgb}{0.8,0.8,0.8}
+
+% Skills bar
+\newcommand\skills[1]{
+  \begin{tikzpicture}
+    \fill[color_barbg,rounded corners=2.5] (0,0) rectangle (1,0.2);
+    \fill[color_highlight,rounded corners=2.5] (0,0) rectangle ({#1},0.2);
+  \end{tikzpicture}
+}
+
+% Page numbering
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}% Remove header rule
+\fancyhead{}% Remove all header contents
+\cfoot{\thepage{} of \pageref{LastPage}}
+
+% Titles
+\usepackage{titlesec}
+\titleformat{\section}
+  {\color{color_highlight}\normalfont\Large\bfseries\uppercase}{}{0pt}{}
+\titlespacing{\section}{0pt}{2\baselineskip}{0.5\baselineskip}
+\titleformat{\subsection}
+  {\large\bfseries}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{\baselineskip}{0.1\baselineskip}
+
+\newcommand{\dateformat}[1]{\textit{#1}}
+
+\setlength\parindent{0em}               % set paragraph indentation size
+\setlist{nolistsep}                     % remove spacing between list items
+
+\usepackage[colorlinks = true,
+            linkcolor = color_highlight,
+            urlcolor  = color_highlight,
+            citecolor = color_highlight,
+            anchorcolor = blue]{hyperref}
+
+\title{CV}
+\author{Randall Ung, PhD}
+\date{August 2020}
+
+\begin{document}
+
+{\Huge \textbf{Randall Ung, PhD}} \\
+{
+\begin{multicols}{2}
+  \large
+  MD-PhD Student \\
+  Chapel Hill, NC \\
+  704-491-1332 \\
+  \href{mailto:randall_ung@med.unc.edu}{randall\_ung@med.unc.edu} \\
+  
+  \columnbreak
+  
+  \vspace*{\fill}
+  \small
+  LinkedIn: \href{https://www.linkedin.com/in/randall-ung/}{linkedin.com/in/randall-ung/} \\
+  Google Scholar: \href{https://scholar.google.com/citations?user=tcMs9UEAAAAJ&hl=en}{user=tcMs9UEAAAAJ&hl} \\
+  GitHub: \href{https://github.com/rlung}{github.com/rlung} \\
+\end{multicols}
+}
+
+\rule{0.8\textwidth}{0.5pt}
+
+\section*{Education}
+  \subsection*{MD, PhD \textbar{} Neuroscience}
+    University of North Carolina at Chapel Hill, 2013--present \\
+    MD, \textit{anticipated May 2021} \\
+    PhD, Neuroscience, conferred Aug 2019
+
+  \subsection*{Bachelor of Science \textbar{} Mathematics \& Biology}
+    University of North Carolina at Chapel Hill, 2006--2010 \\
+    Minor in Chemistry \\
+    GPA (overall, science): 3.59, 3.69
+
+\section*{Select honors \& awards}
+  \begin{tabular}{ p{2.5cm} p{15cm} } 
+    2018--2020 & NIH NIMH F30 fellowship (F30MH115693) \\
+    2017 & Society for Neuroscience Dynamic Poster invitation \\
+    2017 & AUPN CCRC invitation and travel award \\
+    2016--2017 & NIH NINDS Neuroscience Predoctoral Training Grant (NS007431) \\
+    2016 & NIH NIGMS MSTP Training Grant (GM008719) \\
+    2015 & Invited speaker for John B Graham Student Research Day \\
+    2010 & BS in Mathematics with Distinction \\
+    2010 & UNC Carolina Research Scholar \\
+    2010 & Dean's list (6 semesters) \\
+  \end{tabular}
+
+\section*{Skills}
+  \begin{itemize}[leftmargin=*,label={}]
+    \item \skills{0.8} Scientific writing
+    \item \skills{0.7} Graphic design (Illustrator)
+    \item \skills{0.9} Python
+    \item \skills{0.6} Other programming languages (Matlab, R, Unix shell)
+    \item \skills{0.8} Statistics \& data visualization
+    \item \skills{0.8} Behavioral modeling with machine learning
+    \item \skills{0.9} Microsurgery, animal
+    \item \skills{0.9} Microscopy (2-photon, confocal)
+    \item \skills{0.9} Optogenetics \& calcium imaging
+    \item \skills{0.7} Electronics \& Arduino
+    \item \skills{0.6} 3D design \& printing
+    \item \skills{0.6} \LaTeX
+  \end{itemize}
+
+\section*{Research \& academic experience}
+  \subsection*{Adjunct professor, UNC Department of Psychiatry}
+    \dateformat{May 2020--present}
+    \begin{itemize}
+      \item Work with faculty peers in developing analytical pipelines using statistical methods and machine learning
+      \item Design apparatuses to conduct experiments in rodent models integrating calcium imaging and behavioral analysis
+    \end{itemize}
+
+  \subsection*{Graduate research assistant, UNC Neuroscience Curriculum}
+    \dateformat{Aug 2013--Jul 2014 \& Mar 2016--Jun 2019}
+    \begin{description}
+      \item[Advisor:] Garret Stuber, PhD
+      \item[Thesis:] Neural dynamic adaptation of extended amygdala to stress and anxiety
+    \end{description}
+    \begin{itemize}
+      \item Uncovered neural mechanisms and pathways underlying anxiety-related behaviors and feeding
+      \item Integrated innovative tools in neuroscience, computation, and genetics
+    \end{itemize}
+    
+  \subsection*{Instructor, Neuroanalytics, UNC Neuroscience Curriculum}
+    \dateformat{Aug--Dec 2017}
+    \begin{description}
+      \item[Course:] Graduate-level on statistics and programming in Python
+    \end{description}
+    \begin{itemize}
+      \item Designed and led over half of course lectures
+      \item Designed and graded homework assignments and exams
+    \end{itemize}
+
+  \subsection*{Research assistant, UNC Kenan Library Research Hub}
+    \dateformat{Jan--May 2017}
+    \begin{itemize}
+      \item Managed Makerspace where UNC affiliates can utilize 3D printers, software, electronics, and crafting equipment
+      \item Taught course on electronics and 3D design
+    \end{itemize}
+
+  \subsection*{Guest lecturer, Molecular \& Cellular Neuroscience, UNC Neuroscience Curriculum}
+  \dateformat{Aug 2016}
+    \begin{description}
+      \item[Course:] Graduate-level course on behavioral studies in animal models
+    \end{description}
+    \begin{itemize}
+      \item Designed and led lectures
+      \item Create and grade assignments and tests
+    \end{itemize}
+    
+  \subsection*{Lab manager, UNC Neuroscience Center}
+  \dateformat{Oct 2011--Jul 2013}
+    \begin{description}
+      \item[Advisor:] Garret Stuber, PhD
+    \end{description}
+    \begin{itemize}
+      \item Investigated how neural circuits drive to motivated behaviors such as anxiety and feeding using animal models
+      \item Developed computational infrastructure for a junior lab
+    \end{itemize}
+
+  \subsection*{Research assistant \& Undergraduate researcher, UNC Bowles Alcohol Center}
+    \dateformat{May 2009--Sep 2011}
+    \begin{description}
+      \item[Advisor:] Donita Robinson, PhD
+    \end{description}
+    \begin{itemize}
+      \item Investigate how midbrain dopaminergic signaling shapes learning during adolescence
+      \item Manage daily laboratory tasks
+    \end{itemize}
+
+  \subsection*{Undergraduate researcher, UNC Mathematics Department}
+    \dateformat{Aug 2008--May 2010}
+    \begin{description}
+      \item[Advisor:] Peter Mucha, PhD
+    \end{description}
+    \begin{itemize}
+      \item Discovered methods to investigate network dynamics
+    \end{itemize}
+    
+\section*{Clinical experience}
+  \subsection*{Co-leader, UNC MD-PhD Case Conference}
+    \dateformat{May 2020--present}
+    \begin{itemize}
+      \item Organize student presentation of clinical cases
+      \item Work with chief residents to participate in conferences
+    \end{itemize}
+
+  \subsection*{Tutor, UNC School of Medicine}
+    \dateformat{Jul 2018--Jul 2019}
+    \begin{itemize}
+      \item Assisted first- and second-year medical students with course material
+      \item Provided strategies for studying and test taking
+    \end{itemize}
+
+  \subsection*{Co-captain, UNC MD-PhD Vertical Integration Team}
+    \dateformat{Dec 2016--Dec 2018}
+    \begin{itemize}
+        \item Coordinated regular volunteer activities within the community for current students across all classes
+        \item Organized interviews for MD-PhD applicants
+    \end{itemize}
+
+  \subsection*{Co-president, Camp Neuro Summer Camp, Chapel Hill, NC}
+    \dateformat{Dec 2014--Jul 2015}
+    \begin{itemize}
+      \item Initiated the first Camp Neuro Summer Camp at UNC---summer program for high school students interested in medical careers
+      \item Designed and lead lectures and activities and coordinated involvement of UNC faculty
+    \end{itemize}
+
+  \subsection*{Co-leader, UNC Physical Medicine \& Rehabilitation Interest Group}
+    \dateformat{Jul--Nov 2015}
+    \begin{itemize}
+      \item Reinstated interest group at UNC for medical students interested in PM\&R
+      \item Coordinated activities such as learning to use ultrasound and facilitated interaction between students and faculty
+    \end{itemize}
+
+  \subsection*{EMT, Parkwood Volunteer Fire Department, Durham, NC}
+    \dateformat{Jun 2011--Jan 2013}
+    \begin{itemize}
+      \item Worked alongside paramedics to provide emergency care for local community
+      \item 36 hours per month plus continuing education
+    \end{itemize}
+
+
+\section*{Mentoring}
+  \begin{description}
+    \item Rizk Alghorazi, Undergraduate researcher, 2018--2019
+    \item Keegan Hahn, Undergraduate researcher, 2018--2019
+    \item William Ingersoll, High school student, 2018
+    \item Lindsey Brady, Undergraduate researcher, 2017--2018
+    \item Rishi Deshmukh, High school student, 2017--2019
+    \item Daniel Bloodgood, Graduate student, 2014
+    \item Charles Zhou, Graduate student, 2014
+    \item Malhar Patel, Undergraduate researcher, 2012
+  \end{description}
+
+\section*{Publications}
+  
+  Also on \href{https://scholar.google.com/citations?user=tcMs9UEAAAAJ&hl=en}{Google Scholar} \\
+  \textsuperscript{\textbf{\textasteriskcentered}} \textit{denotes co-first authorship}
+  
+  \input{pubs.tex}
+  
+\section*{Select presentations and abstracts}
+  \input{abstracts.tex}
+
+\section*{Other experiences and interests}
+  \begin{itemize}%[leftmargin=*]
+    \item Tutor in Mathematics and Physical Sciences, 2010--2014
+    \item Stackoverflow \& open source contributor (coding)
+    \item Woodworking and DIY'ing
+    \item Cooking and exploring restaurants \& cuisines around the country
+    \item Automotive mechanics
+  \end{itemize}
+
+\end{document}
