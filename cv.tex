@@ -13,16 +13,19 @@
 
 
 % Colors
-% \definecolor{color_highlight}{RGB}{70,130,180} % steelblue
-\definecolor{color_highlight}{RGB}{30,144,255} % dodgerblue 1
-\definecolor{color_barbg}{rgb}{0.8,0.8,0.8}
+% \definecolor{headercolor}{RGB}{70,130,180} % steelblue
+% \definecolor{headercolor}{RGB}{30,144,255} % dodgerblue 1
+\definecolor{headercolor}{RGB}{139,71,93} % palevioletred 4
+\definecolor{barbg}{rgb}{0.8,0.8,0.8}
 
 % Skills bar
 \newcommand\skills[1]{
-  \begin{tikzpicture}
-    \fill[color_barbg,rounded corners=2.5] (0,0) rectangle (1,0.2);
-    \fill[color_highlight,rounded corners=2.5] (0,0) rectangle ({#1},0.2);
-  \end{tikzpicture}
+  % \vcenter{\hbox{
+    \begin{tikzpicture}
+      \fill[barbg,rounded corners=1] (0,0) rectangle (1,0.2);
+      \fill[headercolor,rounded corners=1] (0,0) rectangle ({#1},0.2);
+    \end{tikzpicture}
+  % }}
 }
 
 % Page numbering
@@ -35,7 +38,7 @@
 % Titles
 \usepackage{titlesec}
 \titleformat{\section}
-  {\color{color_highlight}\normalfont\Large\bfseries\uppercase}{}{0pt}{}
+  {\color{headercolor}\normalfont\Large\bfseries\uppercase}{}{0pt}{}
 \titlespacing{\section}{0pt}{2\baselineskip}{0.5\baselineskip}
 \titleformat{\subsection}
   {\large\bfseries}{}{0pt}{}
@@ -47,9 +50,9 @@
 \setlist{nolistsep}                     % remove spacing between list items
 
 \usepackage[colorlinks = true,
-            linkcolor = color_highlight,
-            urlcolor  = color_highlight,
-            citecolor = color_highlight,
+            linkcolor = headercolor,
+            urlcolor  = headercolor,
+            citecolor = headercolor,
             anchorcolor = blue]{hyperref}
 
 \title{CV}
@@ -72,31 +75,30 @@
   \vspace*{\fill}
   \small
   LinkedIn: \href{https://www.linkedin.com/in/randall-ung/}{linkedin.com/in/randall-ung/} \\
-  Google Scholar: \href{https://scholar.google.com/citations?user=tcMs9UEAAAAJ&hl=en}{user=tcMs9UEAAAAJ&hl} \\
-  GitHub: \href{https://github.com/rlung}{github.com/rlung} \\
+  Google Scholar: \href{https://scholar.google.com/citations?user=tcMs9UEAAAAJ&hl=en}{user=tcMs9UEAAAAJ\&hl} \\   % fix ampersand
 \end{multicols}
 }
 
 \rule{0.8\textwidth}{0.5pt}
 
 \section*{Education}
-  \subsection*{MD, PhD \textbar{} Neuroscience}
-    University of North Carolina at Chapel Hill, 2013--present \\
-    MD, \textit{anticipated May 2021} \\
-    PhD, Neuroscience, conferred Aug 2019
+    \subsection*{MD, PhD \textbar{} Neuroscience}
+        University of North Carolina at Chapel Hill, 2013--present \\
+        MD, \textit{anticipated 2021} \\
+        PhD, Neuroscience, conferred 2019
 
-  \subsection*{Bachelor of Science \textbar{} Mathematics \& Biology}
-    University of North Carolina at Chapel Hill, 2006--2010 \\
-    Minor in Chemistry \\
-    GPA (overall, science): 3.59, 3.69
+    \subsection*{Bachelor of Science \textbar{} Mathematics \& Biology}
+        University of North Carolina at Chapel Hill, 2006--2010 \\
+        Minor in Chemistry \\
+        GPA (overall, science): 3.59, 3.69
 
 \section*{Select honors \& awards}
   \begin{tabular}{ p{2.5cm} p{15cm} } 
+    2016, 2020 & NIH NIGMS MSTP Training Grant (GM008719) \\
     2018--2020 & NIH NIMH F30 fellowship (F30MH115693) \\
     2017 & Society for Neuroscience Dynamic Poster invitation \\
     2017 & AUPN CCRC invitation and travel award \\
     2016--2017 & NIH NINDS Neuroscience Predoctoral Training Grant (NS007431) \\
-    2016 & NIH NIGMS MSTP Training Grant (GM008719) \\
     2015 & Invited speaker for John B Graham Student Research Day \\
     2010 & BS in Mathematics with Distinction \\
     2010 & UNC Carolina Research Scholar \\
@@ -104,20 +106,20 @@
   \end{tabular}
 
 \section*{Skills}
-  \begin{itemize}[leftmargin=*,label={}]
-    \item \skills{0.8} Scientific writing
-    \item \skills{0.7} Graphic design (Illustrator)
-    \item \skills{0.9} Python
-    \item \skills{0.6} Other programming languages (Matlab, R, Unix shell)
-    \item \skills{0.8} Statistics \& data visualization
-    \item \skills{0.8} Behavioral modeling with machine learning
-    \item \skills{0.9} Microsurgery, animal
-    \item \skills{0.9} Microscopy (2-photon, confocal)
-    \item \skills{0.9} Optogenetics \& calcium imaging
-    \item \skills{0.7} Electronics \& Arduino
-    \item \skills{0.6} 3D design \& printing
-    \item \skills{0.6} \LaTeX
-  \end{itemize}
+    \begin{itemize}[leftmargin=*,label={}]
+      \item \skills{0.8} Scientific writing
+      \item \skills{0.7} Graphic design (Illustrator)
+      \item \skills{0.9} Python
+      \item \skills{0.6} Other programming languages (Matlab, R, Unix shell)
+      \item \skills{0.8} Statistics \& data visualization
+      \item \skills{0.8} Behavioral modeling with machine learning
+      \item \skills{0.9} Microsurgery, animal
+      \item \skills{0.9} Microscopy (2-photon, confocal)
+      \item \skills{0.9} Optogenetics \& calcium imaging
+      \item \skills{0.7} Electronics \& Arduino
+      \item \skills{0.6} 3D design \& printing
+      \item \skills{0.6} \LaTeX
+    \end{itemize}
 
 \section*{Research \& academic experience}
   \subsection*{Adjunct professor, UNC Department of Psychiatry}
@@ -164,6 +166,12 @@
       \item Designed and led lectures
       \item Create and grade assignments and tests
     \end{itemize}
+
+  \subsection*{Mentor, UNC Neuroscience Curriculum}
+  \dateformat{Aug 2014--May 2016}
+    \begin{itemize}
+      \item Paired with first-year graduate student in the program as mentor as they begin their graduate career
+    \end{itemize}
     
   \subsection*{Lab manager, UNC Neuroscience Center}
   \dateformat{Oct 2011--Jul 2013}
@@ -191,9 +199,15 @@
       \item[Advisor:] Peter Mucha, PhD
     \end{description}
     \begin{itemize}
-      \item Discovered methods to investigate network dynamics
+      \item Explored methods to investigate network dynamics
     \end{itemize}
-    
+
+  % \subsection*{Tutor, Math Help Center, UNC Mathematics Department}
+  %   \dateformat{Sep--Dec 2008, Sep--Dec 2009}
+  %   \begin{itemize}
+  %     \item Assisted other undergraduates with understanding mathematical concepts in their courses
+  %   \end{itemize}
+
 \section*{Clinical experience}
   \subsection*{Co-leader, UNC MD-PhD Case Conference}
     \dateformat{May 2020--present}
@@ -236,7 +250,13 @@
       \item Worked alongside paramedics to provide emergency care for local community
       \item 36 hours per month plus continuing education
     \end{itemize}
-
+    
+  % \subsection*{Volunteer, Carolina Pediatric Attention, Love, and Support (CPALS), UNC Hospital}
+  %   \dateformat{Aug 2009--Dec 2010}
+  %     \begin{itemize}
+  %       \item Paired with pediatric patient in UNC Pediatric Hematology Oncology Clinic to provide support during visits
+  %       \item Socialize with other patients in the Pediatric playroom
+  %     \end{itemize}
 
 \section*{Mentoring}
   \begin{description}
@@ -245,8 +265,9 @@
     \item William Ingersoll, High school student, 2018
     \item Lindsey Brady, Undergraduate researcher, 2017--2018
     \item Rishi Deshmukh, High school student, 2017--2019
-    \item Daniel Bloodgood, Graduate student, 2014
-    \item Charles Zhou, Graduate student, 2014
+    \item Anze Testen, Graduate studnet, 2015--2016
+    \item Daniel Bloodgood, Graduate student, 2014--2015
+    \item Charles Zhou, Graduate student, 2014--2015
     \item Malhar Patel, Undergraduate researcher, 2012
   \end{description}
 
@@ -262,10 +283,12 @@
 
 \section*{Other experiences and interests}
   \begin{itemize}%[leftmargin=*]
-    \item Tutor in Mathematics and Physical Sciences, 2010--2014
-    \item Stackoverflow \& open source contributor (coding)
+    \item Tutor in Mathematics and Physical Sciences, Chapel Hill, NC, 2008--2014
+    \item Small-dog Park Meetup leader, Southern Village, Chapel Hill, NC, 2013--2014
+    \item Cooking and food tourism
+    \item Stackoverflow \& open-source contributor (coding)
+    \item Electronics and circuit building
     \item Woodworking and DIY'ing
-    \item Cooking and exploring restaurants \& cuisines around the country
     \item Automotive mechanics
   \end{itemize}
 

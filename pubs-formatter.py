@@ -3,6 +3,7 @@ import calendar
 
 
 cal_dict = {abbr.lower(): f"{num:02d}" for num, abbr in enumerate(calendar.month_abbr)}
+cal_dict[''] = '13'
 
 # Open bibtex and parse data
 with open('pubs.bib') as bibtex_file:

@@ -1,0 +1,308 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[scale=0.85]{geometry} % Document margins
+\setlength{\hintscolumnwidth}{4cm} % Width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % Width of the space allocated to your name (for 'classic' style)
+
+
+\firstname{Randall} % Your first name
+\familyname{Ung} % Your last name
+\title{MD-PhD student}
+\address{}{Chapel Hill, NC}
+\mobile{(704) 491-1332}
+% \phone{(000) 111 1112}
+% \fax{(000) 111 1113}
+\email{randallung@gmail.com}
+\homepage{https://www.linkedin.com/in/randall-ung}{linkedin.com/in/randall-ung} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \extrainfo{additional information}
+\photo[70pt][0pt]{media/pic} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{"A witty and playful quotation" - John Smith}
+
+
+\begin{document}
+
+% COVER LETTER
+% To remove the cover letter, comment out this entire block
+
+% \clearpage
+
+% \recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+% \date{\today} % Letter date
+% \opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Sincerely yours,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+% \makelettertitle % Print letter title
+
+% \lipsum[1-2] % Dummy text
+% \lipsum[4] % Dummy text
+
+% \makeletterclosing % Print letter signature
+
+% \newpage
+
+
+% CURRICULUM VITAE
+
+\makecvtitle % Print the CV title
+
+\section{Education}
+    \cventry{2014--present}{MD-PhD}{University of North Carolina}{Chapel Hill, NC}{}{Anticipated graduation May 2021}  % Arguments not required can be left empty
+    \cventry{2013--2014}{PhD}{University of North Carolina}{Chapel Hill, NC}{}{
+        Neuroscience \\
+        PhD conferred Aug 2019 as part of MD-PhD curriculum
+    }
+    \cventry{2006--2010}{BS}{University of North Carolina}{Chapel Hill, NC}{}{
+        Mathematics with Distinction \\
+        Biology \\
+        Minor in Chemistry
+    }
+
+\section{Awards}
+    \cvitem{2016, 2020}{NIH NIGMS MSTP Training Grant (GM008719)}
+    \cvitem{2018--2020}{NIH NIMH F30 fellowship (F30MH115693)}
+    \cvitem{2017}{Society for Neuroscience Dynamic Poster invitation}
+    \cvitem{2017}{AUPN CCRC invitation and travel award}
+    \cvitem{2016--2017}{NIH NINDS Neuroscience Predoctoral Training Grant (NS007431)}
+    \cvitem{2015}{Invited speaker for John B Graham Student Research Day}
+    \cvitem{2010}{BS in Mathematics with Distinction}
+    \cvitem{2010}{UNC Carolina Research Scholar}
+    \cvitem{2010}{Dean's list (6 semesters)}
+
+\section{Experience}
+    \subsection{Research}
+        \cventry
+            {May 2020--present}
+            {Adjunct Assistant Professor}
+            {UNC Dept of Psychiatry}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Work with faculty peers in developing analytical pipelines using statistical methods and machine learning
+                    \item Design apparatuses to conduct experiments in rodent models integrating calcium imaging and behavioral analysis
+                \end{itemize}
+            }
+        \cventry
+            {Aug 2013--Jul 2014 \& Mar 2016--Jun 2019}
+            {Graduate Research Assistant}
+            {UNC Neuroscience Curriculum}{Chapel Hill, NC}{}
+            {
+                \begin{description}
+                    \item[Advisor:] Garret Stuber, PhD
+                    \item[Thesis:] Neural dynamic adaptation of extended amygdala to stress and anxiety
+                \end{description}
+                \begin{itemize}
+                    \item Uncovered neural mechanisms and pathways underlying anxiety-related behaviors and feeding
+                    \item Integrated innovative tools in neuroscience, computation, and genetics
+                \end{itemize}
+            }
+        \cventry
+            {Aug--Dec 2017}
+            {Instructor}
+            {UNC Neuroscience Curriculum}
+            {Chapel Hill, NC}{}
+            {
+                \begin{description}
+                    \item[Course:] Graduate-level on statistics and programming in Python
+                \end{description}
+                \begin{itemize}
+                    \item Designed and led over half of course lectures
+                    \item Designed and graded homework assignments and exams
+                \end{itemize}
+            }
+        \cventry
+            {Jan--May 2017}
+            {Research Assistant}
+            {UNC Kenan Library Research Hub}
+            {Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Managed Makerspace where UNC affiliates can utilize 3D printers, software, electronics, and crafting equipment
+                    \item Taught course on electronics and 3D design
+                \end{itemize}
+            }
+        \cventry
+            {Aug 2016}
+            {Guest lecturer}
+            {UNC Neuroscience Curriculum}{Chapel Hill, NC}{}
+            {
+                \begin{description}
+                    \item[Course:] Graduate-level course on behavioral studies in animal models
+                \end{description}
+                \begin{itemize}
+                    \item Designed and led lectures
+                    \item Create and grade assignments and tests
+                \end{itemize}
+            }
+        \cventry
+            {Oct 2011--Jul 2013}
+            {Lab Manager}
+            {UNC Neuroscience Center}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Investigated how neural circuits drive to motivated behaviors such as anxiety and feeding using animal models
+                    \item Developed computational infrastructure for a junior lab
+                \end{itemize}
+            }
+        \cventry
+            {May 2009--Sep 2011}
+            {Research Assistant \& Undergraduate Researcher}
+            {UNC Bowles Alcohol Center}{Chapel Hill, NC}{}
+            {
+                \begin{description}
+                    \item[Advisor:] Donita Robinson, PhD
+                \end{description}
+                \begin{itemize}
+                    \item Investigate how midbrain dopaminergic signaling shapes learning during adolescence
+                    \item Manage daily laboratory tasks
+                \end{itemize}
+            }
+        \cventry
+            {Aug 2008--May 2010}
+            {Undergraduate Researcher}
+            {UNC Dept of Mathematics}{Chapel Hill, NC}{}
+            {
+                \begin{description}
+                    \item[Advisor:] Peter Mucha, PhD
+                \end{description}
+                \begin{itemize}
+                    \item Explored methods to investigate network dynamics
+                \end{itemize}
+            }
+        \cventry
+            {Sep--Dec 2008 \& Sep--Dec 2009}
+            {Tutor}
+            {Math Help Center, UNC Dept of Mathematics}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Assisted other undergraduates with understanding mathematical concepts in their courses
+                \end{itemize}
+            }
+
+    \bigskip
+    \subsection{Clinical}
+        \cventry
+            {May 2020--present}
+            {Co-leader}
+            {UNC MD-PhD Case Conference}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Organize student presentation of clinical cases
+                    \item Work with chief residents to participate in conferences
+                \end{itemize}
+            }
+        \cventry
+            {Jul 2018--Jul 2019}
+            {Tutor}
+            {UNC School of Medicine}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Assisted first- and second-year medical students with course material and Step 1 Board Exam
+                \end{itemize}
+            }
+        \cventry
+            {Dec 2016--Dec 2018}
+            {Co-captain}
+            {UNC MD-PhD Vertical Integration Team}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Coordinated regular volunteer activities within the community for current students across all classes
+                    \item Organized interviews for MD-PhD applicants
+                \end{itemize}
+            }
+        \cventry
+            {Dec 2014--Jul 2015}
+            {Co-president}
+            {Camp Neuro Summer Camp}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Initiated the first Camp Neuro Summer Camp at UNC---summer program for high school students interested in medical careers
+                    \item Designed and lead lectures and activities and coordinated involvement of UNC faculty
+                \end{itemize}
+            }
+        \cventry
+            {Jul--Nov 2015}
+            {Co-leader}
+            {Physical Medicine \& Rehabilitation Interest Group, UNC School of Medicine}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Reinstated interest group at UNC for medical students interested in PM\&R
+                    \item Coordinated activities such as learning to use ultrasound and facilitated interaction between students and faculty
+                \end{itemize}
+            }
+        \cventry
+            {Jun 2011--Jan 2013}
+            {EMT}
+            {Parkowood Volunteer Fire Department}{Durham, NC}{}
+            {
+                \begin{itemize}
+                    \item Worked alongside paramedics to provide emergency care for local community
+                    \item 36 hours per month plus continuing education
+                \end{itemize}
+            }
+        \cventry
+            {Aug 2009--Dec 2010}
+            {Volunteer}
+            {Carolina Pediatric Attention, Love, and Support, UNC Hospital}{Chapel Hill, NC}{}
+            {
+                \begin{itemize}
+                    \item Paired with pediatric patient in UNC Pediatric Hematology Oncology Clinic to provide support during visits
+                    \item Socialize with other patients in the Pediatric playroom
+                \end{itemize}
+            }
+
+\section{Publications}
+    Also on \href{https://scholar.google.com/citations?user=tcMs9UEAAAAJ&hl=en}{Google Scholar} \\
+    \textsuperscript{\textbf{\textasteriskcentered}} \textit{denotes co-first authorship}
+
+    \input{pubs.tex}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Mothertongue}{}
+\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
+\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Piano}{Chess}
+\cvlistdoubleitem{Cooking}{Dancing}
+\cvlistitem{Running}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
